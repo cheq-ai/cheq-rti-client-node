@@ -8,13 +8,13 @@ export class RTILoggerNode implements IRTILogger {
   agent: Agent;
   application: string;
 
-  constructor(apiKey: string, tagHash: string) {
+  constructor(apiKey: string, tagHash: string, application: string) {
     this.apiKey = apiKey;
     this.tagHash = tagHash;
     this.agent = new Agent({
       keepAlive: true,
     });
-    this.application = `RTILoggerNode`;
+    this.application = application;
   }
 
   async log(level: 'audit' | 'error' | 'info' | 'warn', message: string, action?: string): Promise<void> {
