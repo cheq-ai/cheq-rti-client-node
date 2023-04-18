@@ -1,0 +1,38 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build"
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 120,
+    "tabWidth": 2
+  },
+  "name": "cheq-rti-client-node",
+  "author": "CHEQ",
+  "module": "dist/cheq-rti-client-node.esm.js",
+  "devDependencies": {
+    "tsdx": "0.14.1",
+    "tslib": "2.5.0",
+    "typescript": "4.9.5"
+  },
+  "dependencies": {
+    "cheq-rti-client-core-js": "git+ssh://git@github.com:cheq-ai/cheq-rti-client-core-js.git#0.1.0"
+  }
+}
